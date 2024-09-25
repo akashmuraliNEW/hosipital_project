@@ -39,7 +39,7 @@ def user_login(request):
             login(request,user)
             return redirect('/home')
         else:
-            return render(request,'User_login.html')
+            return render(request,'user/User_login.html')
     return render(request,'user/User_login.html')
         
 
