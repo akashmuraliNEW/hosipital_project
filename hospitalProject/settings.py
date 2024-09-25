@@ -133,7 +133,7 @@ STATIC_URL = 'static/'
 #     BASE_DIR / "static",
 #     '/var/www/static/',
 # ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
