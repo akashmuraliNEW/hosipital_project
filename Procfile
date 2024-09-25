@@ -1,0 +1,1 @@
+web: gunicorn hospitalProject.wsgi:application
