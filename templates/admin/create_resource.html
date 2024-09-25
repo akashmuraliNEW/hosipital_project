@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create New Resource</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th><label for="id_name">Name:</label></th>
+            <td><input type="text" name="name" id="id_name" required></td>
+        </tr>
+        <tr>
+            <th><label for="id_resource_type">Resource Type:</label></th>
+            <td>
+                <select name="resource_type" id="id_resource_type" required>
+                    {% for type in resource_types %}
+                    <option value="{{ type.0 }}">{{ type.1 }}</option>
+                {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="id_department">Department:</label></th>
+            <td>
+                <select name="department" id="id_department" required>
+                    {% for department in departments %}
+                        <option value="{{ department.pk }}">{{ department.name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button type="submit">Create Resource</button>
+</form>
+</body>
+</html>

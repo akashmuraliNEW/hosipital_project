@@ -1,0 +1,63 @@
+{% extends 'user/base.html' %}
+{% block head %}    <h3>book Appointment</h3> {% endblock %}
+
+
+{% block texthead %}		<h3 class="text-heading">book your appointments</h3> {% endblock %}
+
+{% block content %}
+<div class="book_apointment_area">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-7">
+                <div class="popup_box ">
+                    <div class="popup_inner">
+                        <h3>
+                            Book an 
+                        <span>Appointment</span>
+                        </h3>
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <select class="form-select wide" id="default-select" name="doctor" class="">
+                                        <option data-display="Please select doctor to visit">Please select doctor to visit </option>
+                                        <option value="Jhon Smith">Jhon Smith</option>
+                                        <option value="david orton">david orton</option>
+                                        <option value="michael">michael</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-9">
+                                    <input type="text" name="name"  placeholder="Your name ">
+                                </div>
+                                <div class="col-xl-3">
+                                    <input type="text" name="age"  placeholder="Your age">
+                                </div>
+                                <div class="col-xl-6">
+                                    <input type="text" name="phoneNumber"  placeholder="Phone number ">
+                                </div>
+                                <div class="col-xl-6">
+                                    <input type="email" name="email"  placeholder="Email Address">
+                                </div>
+                                <div class="col-xl-6">
+                                    <input class="date" name="appointment_date"  placeholder="Date YY-MM-DD">
+                                </div>
+                                <div class="col-xl-6">
+                                    <input class="timepicker" name="appointment_time" placeholder="Suitable time">
+                                </div>
+                                <div class="col-xl-12">
+                                    <button type="submit" class="boxed-btn3">Make an Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+

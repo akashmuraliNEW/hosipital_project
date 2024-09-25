@@ -1,0 +1,39 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block head %}    
+<h3>Health Tips</h3> 
+
+
+{% endblock %}
+
+{% block texthead %}		
+<h3 class="text-heading" ">Tips for a healthy diet</h3>
+
+<div><img src="{% static 'img/healthy_tips/healthytips.png' %}" width="450px" height="400px" style="margin-left: 100px; margin-bottom: 50px;" alt=""></div>
+{% endblock %}
+
+ 
+{% block text %}
+<h3>10 Healthy diet tips</h3>
+<ol type="1">
+  <li>1.Stick to 3 square meals a day (breakfast, lunch, dinner)</li>
+  <li>2.Reduce your portion size, especially at dinner. Use a standard 9 inch plate and aim to increase your portion of vegetables to at least half the dinner plate.</li>
+  <li>3.Increase your fruit intake – keep it at work, in the car and in the handbag!</li>
+  <li>4.Limit red meat intake to a maximum of 3 times per week</li>
+  <li>5.Try to increase your fish intake, especially oily fish like salmon, mackerel, trout and sardines</li>
+  <li>6.Choose low fat dairy – limit your cheese intake to a max of two matchstick box sizes per week/li>
+  <li>7.Limit your salt intake – avoid using salt at the table and in cooking</li>
+  <li>8.Avoid adding sugar to your food or drink</li>
+  <li>9.Watch your alcohol intake – aim for two alcohol free days per week</li>
+  <li>10.Always keep hydrated</li>
+</ol>
+{% endblock %}
+{% block content %}
+{% endblock %}
+
+
+
+
+
+

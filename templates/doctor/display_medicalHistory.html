@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%if MedicalHistory %}
+  <h1>  medical record for user : {{MedicalHistory.user.username }}</h1>
+   <div style="margin-left: 100px;"><p>{{ MedicalHistory.diagnoses }}</p>
+    <p>{{ MedicalHistory.medications }}</p>
+    <p>{{ MedicalHistory.allergies }}</p>
+    <p>{{ MedicalHistory.treatment_history }}</p>
+    {% else %}
+    <h1>  No medical record found for user : {{MedicalHistory.user.username }}</h1>
+    {% endif %}
+
+</div> 
+
+
+</body>
+</html>
